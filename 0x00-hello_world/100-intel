@@ -1,1 +1,2 @@
-Correct output: export CFILE=0-main.c ; ./100-intel where main.c contains a main function printing a string on the standard output.
+#!/bin/bash
+gcc -masm=intel $CFILE -S > $(echo $CFILE|cut -d"" -f1).s
