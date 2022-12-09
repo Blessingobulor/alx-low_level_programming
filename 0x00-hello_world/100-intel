@@ -1,0 +1,1 @@
+Correct output: export CFILE=0-main.c ; ./100-intel where main.c contains a main function printing a string on the standard output.
