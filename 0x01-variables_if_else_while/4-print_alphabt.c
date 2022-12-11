@@ -2,17 +2,19 @@
 
 /**
  * main - print the alphabet in lowercase
- * followed with new line executing q and e
- * Return 0
+ * followed with new line, except q and e
+ * Return: Always 0
  */
-int main(void)
+	int main(void)
 {
-char la;
-for (la = 'a'; la <= 'z'; la++
-{
-if (la != 'e' && la != 'q')
-	putchar(la);
-}
-putchar('\n');
-return (0);
+	char la;
+
+	for (la = 'a'; la <= 'z'; la++
+
+	{
+		if (la != 'e' && la != 'q')
+		putchar(la);
+	}
+	putchar('\n');
+	return (0);
 }
