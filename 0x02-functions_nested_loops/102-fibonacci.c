@@ -1,27 +1,31 @@
+#include "main.h"
 #include <stdio.h>
-
-
 /**
- *numLength - returns the lenth of string
- *@num : operand number
- *Return: number of digits
+ * main - prints first 50 numbers of the fibonacci sequence
+ * Return: 0
  */
-int numLength(int num)
+int main(void)
 {
-	int length = 0;
+	int i, n;
+	long f1, f2, next;
 
-	if (!num)
+	f1 = 1;
+	f2 = 2;
+	n = 50;
+
+	for (i = 0; i < n; i++)
 	{
-		return (1);
+		if (i == 49)
+		{
+			printf("%lu", f1);
+		} else
+		{
+			printf("%lu, ", f1);
+			next = f1 + f2;
+			f1 = f2;
+			f2 = next;
+		}
 	}
-
-	while (num)
-	{
-		num = num / 10;
-		length += 1;
-	}
-
-
-	return (length);
+	printf("\n");
+	return (0);
 }
-
