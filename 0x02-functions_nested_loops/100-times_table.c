@@ -1,47 +1,51 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * print_times_table -  function that prints the multiplication table
- * @n: user value
+ * print_times_table - prints times table
+ * @n : times table to use
+ * Return:void
  */
+
 void print_times_table(int n)
 {
-	int a;
-	int b;
-	int c;
-	if (n < 0 || n >= 15)
-		return;
-	for (a = 0; a <= n; a++)
+
+int a = 0, rep, b;
+
+if (n < 0 || n > 15)
+	return;
+
+while (a <= n)
+{
+	for (b = 0; b <= n; b++)
 	{
-		for (b = 0; b <= n; b++)
+		rep = a * b;
+		if (b == 0)
+			_putchar('0' + rep);
+		else if (rep < 10)
 		{
-			c = (a * b);
-			if (b == 0)
-				_putchar('0' + c);
-			else
-			{
-				_putchar(',');
-				_putchar(' ');
-				if (c <= 9)
-				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar('0' + c);
-				}
-				else if (c > 9 && c < 100)
-				{
-					_putchar(' ');
-					_putchar('0' + (c / 10));
-					_putchar('0' + (c % 10));
-				}
-				else if (c >= 100)
-				{
-					_putchar('0' + (c / 100));
-					_putchar('0' + ((c / 10) % 10));
-					_putchar('0' + (c % 10));
-				}
-			}
+			_putchar(' ');
+			_putchar(' ');
+			_putchar('0' + rep);
 		}
-		_putchar('\n');
+		else if (rep < 100)
+		{
+			_putchar(' ');
+			_putchar('0' + rep / 10);
+			_putchar('0' + rep % 10);
+		}
+		else
+		{
+			_putchar('0' + rep / 100);
+			_putchar('0' + (rep - 100) / 10);
+			_putchar('0' + rep % 10);
+		}
+		if (b < n)
+		{
+			_putchar(',');
+			_putchar(' ');
+		}
 	}
+	_putchar('\n');
+	a++;
+}
 }
