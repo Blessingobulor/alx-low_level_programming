@@ -1,28 +1,25 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
- * main - finds and prints the sum of the even-valued terms
- * followed by a new line
- * Return: Always 0 (Success)
+ * main - main block
+ * Description: computes and prints the sum of all the multiples of 3 or
+ * 5 below 1024 (excluded), followed by a new line
+ * Return: 0
  */
 int main(void)
 {
-int i;
-unsigned long int j, k, next, sum;
-j = 1;
-k = 2;
-sum = 0;
-for (i = 1; i <= 33; ++i)
-{
-if (j < 4000000 && (j % 2) == 0)
-{
-sum = sum + j;
-}
-next = j + k;
-j = k;
-k = next;
-}
-printf("%lu\n", sum);
-return (0);
-}
+	int c = 0;
+	int sum = 0;
 
+	while (c < 1024)
+	{
+		if (c % 3 == 0 || c % 5 == 0)
+		{
+			sum += c;
+		}
+
+		c++;
+	}
+	printf("%i\n", sum);
+	return (0);
+}
