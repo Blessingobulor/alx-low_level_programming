@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "holberton.h"
 
 /**
  * main - Program that takes in all integer arguments and returns the sum
