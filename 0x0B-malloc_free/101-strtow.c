@@ -1,6 +1,5 @@
 #include <stdlib.h>
 
-
 /**
  * count_word - helper function to count the number of words in a string
  * @s: string to evaluate
@@ -18,7 +17,7 @@ int count_word(char *s)
 	{
 		if (s[c] == ' ')
 			flag = 0;
-		else if (flag == 0)
+else if (flag == 0)
 		{
 flag = 1;
 			w++;
